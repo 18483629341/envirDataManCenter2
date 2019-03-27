@@ -81,7 +81,7 @@ body {
   padding: 0 50px;
 }
 .section .ListBox {
-  width: 268px;
+  width: 235px;
 }
 .section .leftListBox {
   width: 100px;
@@ -94,7 +94,7 @@ body {
   flex: 1;
 }
 .section .CenterContent {
-  width: 800px;
+  width: 1000px;
   height: 100%;
   margin: 0 auto;
 }

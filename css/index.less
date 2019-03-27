@@ -104,14 +104,13 @@
 
 .ListLi{
 	font-weight: 700;
-	height: 56px;
-    line-height: 56px;
-	background: url('../img/box_bg.png');
-	background-size:100% 100%; 
+	height: 57px;
+    line-height: 57px;
+	
 }
 
 .item{
-	width:53%;
+	width:67%;
 	display: inline-block;
 	font-size:16px;
 	color:#92beff;
@@ -119,7 +118,7 @@
 	font-weight: 700;
 }
 .num{
-	width:45%;
+	width:29%;
 	display: inline-block;
 	text-align: right;
 	font-size:18px;
@@ -132,6 +131,8 @@
 		background: url('../img/left_title_bg.png');
 	}
 	.ListLi{
+		background: url('../img/left_box_bg.png');
+		background-size:100% 100%; 
 		.item{
 			padding-left:20px;
 			
@@ -153,6 +154,8 @@
 		background: url('../img/right_title_bg.png');
 	}
 	.ListLi{
+		background: url('../img/right_box_bg.png');
+		background-size:100% 100%; 
 		.item{
 			padding-right:20px;
 			text-align: right;
@@ -183,7 +186,7 @@
 
 
 /* 绘制光点随着曲线移动  模块 start*/
-@lightBoxW:180px;
+@lightBoxW:148px;
 @lightBoxH:684px;
 .QuadraticCurveBox{
 	margin-top: 96px;
@@ -347,13 +350,14 @@
 	}
 }
 .RotateBox{
-	width: 810px;
-	height: 390px;
+	width: 1000px;
+	height: 380px;
 }
 
 .RotateBox.outer{
-  	padding: 25px 30px;
+  
 	background:url(../img/roll_wai.png);
+	border:1px solid red;
 	// .elipse{
 	// 	top: -40%;
 	// 	background:url(../img/roll_wai.png);
@@ -374,11 +378,12 @@
 
 .RotateBox.inner{
 	margin: 92px 167px;
-    width: 470px;
+    width:  560px;
     height: 200px;
     position: relative;
     top: -388px;
 	background: url(../img/roll_nei.png);
+	border:1px solid red;
 	// .elipse{
 	// 	top: -40%;
 	// 	background: url(../img/roll_nei.png);
@@ -412,8 +417,8 @@
 }
 
 .RotateItem{
-	width: 75px;
-	height: 75px;
+	width: 100px;
+	height:100px;
 	background:url(../img/blue_roll.png);
 	background-size: 100% 100%;
 	position: absolute;
@@ -423,7 +428,7 @@
 	p{
 		color:#fff;
 		font-size: 18px;
-		line-height: 75px;
+		line-height: 100px;
 		text-align: center;
 	} 
 	.RollName{
@@ -434,8 +439,8 @@
 	}
 }
 .RotateItemInner{
-	width: 60px;
-	height: 60px;
+	width: 80px;
+	height: 80px;
 	background:url(../img/green_roll.png);
 	background-size: 100% 100%;
 	position: absolute;
@@ -445,7 +450,7 @@
 	p{
 		color:#fff;
 		font-size: 14px;
-		line-height: 60px;
+		line-height: 80px;
 		text-align: center;
 	}
 	.unit{
@@ -456,7 +461,7 @@
 		font-size: 13px;
 		line-height: 24px;
 		width:120px;
-		margin-left:-30px;
+		margin-left:-20px;
 	}
 	
 }

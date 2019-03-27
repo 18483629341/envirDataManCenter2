@@ -88,13 +88,11 @@
 }
 .ListLi {
   font-weight: 700;
-  height: 56px;
-  line-height: 56px;
-  background: url('../img/box_bg.png');
-  background-size: 100% 100%;
+  height: 57px;
+  line-height: 57px;
 }
 .item {
-  width: 53%;
+  width: 67%;
   display: inline-block;
   font-size: 16px;
   color: #92beff;
@@ -102,7 +100,7 @@
   font-weight: 700;
 }
 .num {
-  width: 45%;
+  width: 29%;
   display: inline-block;
   text-align: right;
   font-size: 18px;
@@ -114,6 +112,10 @@
 .leftBox .ListHeader {
   padding-left: 14px;
   background: url('../img/left_title_bg.png');
+}
+.leftBox .ListLi {
+  background: url('../img/left_box_bg.png');
+  background-size: 100% 100%;
 }
 .leftBox .ListLi .item {
   padding-left: 20px;
@@ -131,6 +133,10 @@
   padding-right: 14px;
   text-align: right;
   background: url('../img/right_title_bg.png');
+}
+.rightBox .ListLi {
+  background: url('../img/right_box_bg.png');
+  background-size: 100% 100%;
 }
 .rightBox .ListLi .item {
   padding-right: 20px;
@@ -159,12 +165,12 @@
 /* 绘制光点随着曲线移动  模块 start*/
 .QuadraticCurveBox {
   margin-top: 96px;
-  width: 180px;
+  width: 148px;
   height: 684px;
   position: relative;
 }
 .QuadraticCurve {
-  width: 180px;
+  width: 148px;
   height: 684px;
   position: absolute;
 }
@@ -340,12 +346,12 @@
   }
 }
 .RotateBox {
-  width: 810px;
-  height: 390px;
+  width: 1000px;
+  height: 380px;
 }
 .RotateBox.outer {
-  padding: 25px 30px;
   background: url(../img/roll_wai.png);
+  border: 1px solid red;
 }
 .RotateBox.outer .RotateItemMain {
   width: 100%;
@@ -357,11 +363,12 @@
 }
 .RotateBox.inner {
   margin: 92px 167px;
-  width: 470px;
+  width: 560px;
   height: 200px;
   position: relative;
   top: -388px;
   background: url(../img/roll_nei.png);
+  border: 1px solid red;
 }
 .RotateBox.inner .RotateItemMain {
   width: 100%;
@@ -381,8 +388,8 @@
   transform: rotateX(60deg) rotateZ(0deg);
 }
 .RotateItem {
-  width: 75px;
-  height: 75px;
+  width: 100px;
+  height: 100px;
   background: url(../img/blue_roll.png);
   background-size: 100% 100%;
   position: absolute;
@@ -393,7 +400,7 @@
 .RotateItem p {
   color: #fff;
   font-size: 18px;
-  line-height: 75px;
+  line-height: 100px;
   text-align: center;
 }
 .RotateItem .RollName {
@@ -402,8 +409,8 @@
   line-height: 27px;
 }
 .RotateItemInner {
-  width: 60px;
-  height: 60px;
+  width: 80px;
+  height: 80px;
   background: url(../img/green_roll.png);
   background-size: 100% 100%;
   position: absolute;
@@ -414,7 +421,7 @@
 .RotateItemInner p {
   color: #fff;
   font-size: 14px;
-  line-height: 60px;
+  line-height: 80px;
   text-align: center;
 }
 .RotateItemInner .unit {
@@ -425,7 +432,7 @@
   font-size: 13px;
   line-height: 24px;
   width: 120px;
-  margin-left: -30px;
+  margin-left: -20px;
 }
 .RotateBox.center {
   margin: 99px auto;
