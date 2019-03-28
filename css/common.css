@@ -88,18 +88,19 @@ body {
   min-height: 720px;
 }
 .section .LineList {
-  width: 180px;
+  width: 142px;
+  margin-top: 140px;
 }
 .section .CenterBox {
   flex: 1;
 }
 .section .CenterContent {
-  width: 1000px;
+  width: 1005px;
   height: 100%;
   margin: 0 auto;
 }
 .section .CenterHeader {
-  height: 200px;
+  height: 290px;
 }
 .section .CenterMain {
   height: 440px;

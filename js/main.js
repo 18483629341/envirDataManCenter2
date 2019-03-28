@@ -46,13 +46,13 @@ function draw(elementId, n) {
     context.setLineDash([6, 6]);//设置线条为虚线的样式
     for (var i = 0; i < n; i++) {
         var startY = perHeight / 2 + perHeight * i;
-        var controlY=parseInt(centerY+perHeight/8*(i-n/2));
+        var controlY=parseInt(centerY+perHeight/16*(i-n/2));
         context.beginPath();
 
         context.moveTo(0, startY); //曲线绘制的起点
         //quadraticCurveTo(cpx,cpy,x,y)　　//cpx，cpy表示控制点的坐标,x，y表示终点坐标；
         //曲线绘制的控制点位整个canvas
-        context.quadraticCurveTo(20, controlY, boxWidth, centerY);
+        context.quadraticCurveTo(30, controlY, boxWidth, centerY);
         context.strokeStyle = "#078dff";//设置贝塞尔曲线的颜色
         context.stroke();
     }
@@ -74,7 +74,7 @@ function LightLoop(element, n,type) {
     this.childWidth = $(this.element).children().width();                   //移动点的子元素的宽度    
     this.childHeight = $(this.element).children().height();                 //移动点的子元素的高度
     //控制点p1统一为
-    this.controlX = 20;                                          //离canvas做左侧的水平距离 统一为20；
+    this.controlX = 30;                                          //离canvas做左侧的水平距离 统一为30；
     //终点p2统一为右边终点
     this.endX = this.boxWidth;
     this.endY = this.boxHeight / 2;//垂直中心
@@ -94,7 +94,7 @@ function LightLoop(element, n,type) {
         for (var i = 0; i < n; i++) {
             var obj = {};
              //控制点p1
-            obj.controlY= this.boxHeight / 2+this.perHeight/8*(i-n/2);                          
+            obj.controlY= this.boxHeight / 2+this.perHeight/16*(i-n/2);                          
             //如果是光点往集中方向移动的类型
             if(this.type==="converage"){
             //起点p0                

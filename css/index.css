@@ -65,6 +65,7 @@
   width: 200px;
   position: absolute;
   height: 22px;
+  line-height: 22px;
   top: 14px;
   right: 60px;
   text-align: right;
@@ -75,14 +76,42 @@
 .UnitBox .unit {
   color: #fff;
 }
+/*tab切换 start*/
+.TabsList {
+  position: absolute;
+  width: 210px;
+  height: 38px;
+  top: 17px;
+  left: 60px;
+}
+.TabsList .TabsLi {
+  flex: 1;
+  height: 100%;
+  line-height: 38px;
+  color: #fff;
+  font-size: 16px;
+  text-align: center;
+}
+.TabsList .DataCollection {
+  background: url(../img/left_tab_off.png);
+}
+.TabsList .DataServe {
+  background: url(../img/right_tab_off.png);
+}
+.TabsList .DataCollection.active {
+  background: url(../img/left_tab_on.png);
+}
+.TabsList .DataServe.active {
+  background: url(../img/right_tab_on.png);
+}
 /*列表部分 start*/
 .ListHeader {
-  margin-bottom: 10px;
-  margin-top: 25px;
-  width: 257px;
-  height: 60px;
-  line-height: 60px;
-  color: #61a8ff;
+  margin-bottom: 22px;
+  margin-top: 70px;
+  width: 253px;
+  height: 49px;
+  line-height: 49px;
+  color: #fff;
   font-size: 20px;
   font-weight: 700;
 }
@@ -124,13 +153,13 @@
   padding-right: 20px;
 }
 .leftBox .ListLi + .ListLi {
-  margin-top: 14px;
+  margin-top: 15px;
 }
 .rightBox {
   margin-left: 5px;
 }
 .rightBox .ListHeader {
-  padding-right: 14px;
+  padding-right: 28px;
   text-align: right;
   background: url('../img/right_title_bg.png');
 }
@@ -147,36 +176,38 @@
   text-align: left;
 }
 .rightBox .ListLi + .ListLi {
-  margin-top: 23px;
-}
-.HeaderCon {
-  line-height: 72px;
+  margin-top: 24px;
 }
 .HeaderCon .item {
-  color: #00fff0;
-  font-size: 22px;
+  text-align: right;
+  color: #fff;
+  font-size: 20px;
   padding-left: 60px;
+  width: 50%;
+  padding-right: 76px;
 }
 .HeaderCon .num {
-  font-size: 22px;
-  padding-right: 34px;
+  font-size: 30px;
+  width: 49%;
+  text-align: left;
+  padding-left: 76px;
+  color: #00fff0;
 }
 /*列表部分 end*/
 /* 绘制光点随着曲线移动  模块 start*/
 .QuadraticCurveBox {
-  margin-top: 96px;
-  width: 148px;
-  height: 684px;
+  width: 142px;
+  height: 705px;
   position: relative;
 }
 .QuadraticCurve {
-  width: 148px;
-  height: 684px;
+  width: 142px;
+  height: 705px;
   position: absolute;
 }
 .LightBox {
   width: 100%;
-  height: 684px;
+  height: 705px;
   z-index: 2;
   position: relative;
 }
@@ -225,23 +256,23 @@
 }
 .LineIcon9 {
   left: 0;
-  top: 684px;
+  top: 705px;
 }
 .RightLineList {
-  transform: rotate(180deg);
-  margin-top: 96px;
+  transform: rotateY(180deg);
 }
 /*绘制光点随着曲线移动  模块 end*/
 .HeaderCon {
-  width: 437px;
-  height: 91px;
-  margin: 20px auto 10px;
+  width: 798px;
+  height: 94px;
+  line-height: 94px;
+  margin: 27px auto 0;
   background: url(../img/top_bg.png) no-repeat;
 }
 .DownIconBox {
   position: relative;
-  width: 42px;
-  height: 86px;
+  width: 50px;
+  height: 88px;
   margin: 0 auto;
   background: url(../img/down.png) no-repeat;
   animation: downMove 5s infinite;
@@ -257,61 +288,61 @@
 }
 @keyframes downMove {
   from {
-    top: 0px;
+    top: -10px;
     opacity: .2;
   }
   to {
-    top: 20px;
+    top: 10px;
     opacity: 1;
   }
 }
 @-moz-keyframes downMove {
   from {
-    top: 0px;
+    top: -10px;
     opacity: .2;
   }
   to {
-    top: 20px;
+    top: 10px;
     opacity: 1;
   }
 }
 @-webkit-keyframes downMove {
   from {
-    top: 0px;
+    top: -10px;
     opacity: .2;
   }
   to {
-    top: 20px;
+    top: 10px;
     opacity: 1;
   }
 }
 @keyframes upMove {
   from {
-    top: 0px;
+    top: 10px;
     opacity: .2;
   }
   to {
-    top: -20px;
+    top: -10px;
     opacity: 1;
   }
 }
 @-moz-keyframes upMove {
   from {
-    top: 0px;
+    top: 10px;
     opacity: .2;
   }
   to {
-    top: -20px;
+    top: -10px;
     opacity: 1;
   }
 }
 @-webkit-keyframes upMove {
   from {
-    top: 0px;
+    top: 10px;
     opacity: .2;
   }
   to {
-    top: -20px;
+    top: -10px;
     opacity: 1;
   }
 }
@@ -351,7 +382,6 @@
 }
 .RotateBox.outer {
   background: url(../img/roll_wai.png);
-  border: 1px solid red;
 }
 .RotateBox.outer .RotateItemMain {
   width: 100%;
@@ -362,13 +392,12 @@
   margin-left: -50px;
 }
 .RotateBox.inner {
-  margin: 92px 167px;
+  margin: 90px 220px;
   width: 560px;
   height: 200px;
   position: relative;
   top: -388px;
   background: url(../img/roll_nei.png);
-  border: 1px solid red;
 }
 .RotateBox.inner .RotateItemMain {
   width: 100%;
@@ -435,12 +464,12 @@
   margin-left: -20px;
 }
 .RotateBox.center {
-  margin: 99px auto;
-  width: 183px;
-  height: 183px;
+  margin: 37px auto;
+  width: 304px;
+  height: 304px;
   position: relative;
   z-index: 8;
-  top: -732px;
+  top: -838px;
 }
 .CenterRoll {
   width: 100%;
@@ -453,14 +482,16 @@
 }
 .CenterRoll .CenterItem {
   color: #fff;
-  font-size: 20px;
-  line-height: 48px;
+  font-size: 26px;
+  line-height: 65px;
   text-align: center;
+  font-weight: 700;
+  margin-top: 34px;
 }
 .CenterRoll .CenterNum {
   color: #ffe400;
-  font-size: 16px;
-  line-height: 28px;
+  font-size: 32px;
+  line-height: 50px;
   text-align: center;
 }
 .CenterRoll .CenterNum span {
@@ -469,7 +500,7 @@
 /* 旋转模块  end*/
 /* 中间底部 */
 .CenterBottom {
-  margin-top: -24px;
+  margin-top: 30px;
 }
 .LevelDataLi {
   width: 137px;
@@ -478,12 +509,12 @@
   position: relative;
 }
 .LevelDataLi + .LevelDataLi {
-  margin-left: 160px;
+  margin-left: 250px;
 }
 .UpIconBox {
-  width: 42px;
-  height: 86px;
-  left: 50px;
+  width: 50px;
+  height: 88px;
+  left: 42px;
   background: url(../img/up.png) no-repeat;
   position: absolute;
   animation: upMove 5s infinite;
