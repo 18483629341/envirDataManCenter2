@@ -25,7 +25,7 @@ function RollPanel(element) {
 	//循环一次执行的方法
 	this.turn=function(){
 		//requestAnimFrame(_this.turn);
-		this.angle=this.angle+0.01;
+		this.angle=this.angle+0.03;
 		var radio=null;
 		for(var i=0;i<this.n;i++){
             

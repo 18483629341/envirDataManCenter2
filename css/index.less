@@ -351,11 +351,17 @@
 /* 旋转模块  start*/
 
 .CenterMain{
-	background: url('../img/roll_di.png') no-repeat;
-	background-size: 38%;
-    background-position: 50% 57%;
+	position: relative;
 }
-
+.RollBottomDiv{
+	position: absolute;
+	width:360px;
+	height:102px;
+	top:270px;
+	left:320px;
+	background: url('../img/roll_di.png') no-repeat;
+	//background-size:;
+}
 @-webkit-keyframes spin {
 	from {
 		-webkit-transform: rotateX(60deg) rotateZ(-180deg);
@@ -390,6 +396,7 @@
 .RotateBox.outer{
   
 	background:url(../img/roll_wai.png);
+	background-size:100% 100%; 
 	// .elipse{
 	// 	top: -40%;
 	// 	background:url(../img/roll_wai.png);
@@ -415,6 +422,7 @@
     position: relative;
     top: -388px;
 	background: url(../img/roll_nei.png);
+	background-size:100% 100%; 
 	// .elipse{
 	// 	top: -40%;
 	// 	background: url(../img/roll_nei.png);
