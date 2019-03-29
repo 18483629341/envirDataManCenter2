@@ -20,12 +20,12 @@ function RollPanel(element) {
 		turnOn=setInterval(function(){
 			//顺时针旋转 ++，逆时针旋转  --
 			_this.turn();
-		},20)
+		},10)
 	}).trigger('mouseleave');
 	//循环一次执行的方法
 	this.turn=function(){
 		//requestAnimFrame(_this.turn);
-		this.angle=this.angle+0.05;
+		this.angle=this.angle+0.1;
 		var radio=null;
 		for(var i=0;i<this.n;i++){
             

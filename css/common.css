@@ -74,6 +74,7 @@ body {
   background-repeat: no-repeat;
   background-size: 100% 100%;
   overflow-x: hidden;
+  background-position: center -110px;
 }
 .body1::-webkit-scrollbar {
   display: none;
@@ -102,10 +103,12 @@ body {
   margin: 0 auto;
 }
 .section .CenterHeader {
-  height: 290px;
+  height: 235px;
 }
 .section .CenterMain {
   height: 440px;
+  transform: scale(0.9);
+  transform-origin: 40% 50%;
 }
 .footer {
   width: 100%;

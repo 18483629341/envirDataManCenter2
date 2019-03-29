@@ -133,13 +133,13 @@
 
 .ListLi{
 	font-weight: 700;
-	height: 57px;
-    line-height: 57px;
+	height: 54px;
+    line-height: 54px;
 	
 }
 
 .item{
-	width:67%;
+	width:61%;
 	display: inline-block;
 	font-size:16px;
 	color:#92beff;
@@ -147,11 +147,12 @@
 	font-weight: 700;
 }
 .num{
-	width:29%;
-	display: inline-block;
-	text-align: right;
-	font-size:18px;
-	color:#ffffff;
+	width: 36%;
+    display: inline-block;
+    text-align: right;
+    font-size: 18px;
+    font-weight: 700;
+    color: #ffffff;
 }
 .leftBox{
 	margin-right:5px;
@@ -172,7 +173,7 @@
 		}
 	}
 	.ListLi+.ListLi{
-		margin-top: 15px;
+		margin-top: 12px;
 	}
 }
 .rightBox{
@@ -195,22 +196,26 @@
 		}	
 	}
 	.ListLi+.ListLi{
-		margin-top: 24px;
+		margin-top: 20.1px;
 	}
 }
 .HeaderCon{
 
 	.item{
+		display: inline-block;
 		text-align: right;
 		color: #fff;
 		font-size: 20px;
+		line-height: 65px;
 		padding-left: 60px;
 		width: 50%;
 		padding-right: 76px;	
 	}
 	.num{
+		display: inline-block;
 		font-size: 30px;
 		width: 49%;
+		line-height: 72px;
 		text-align: left;
 		padding-left: 76px;
 		color: #00fff0;
@@ -221,7 +226,7 @@
 
 /* 绘制光点随着曲线移动  模块 start*/
 @lightBoxW:142px;
-@lightBoxH:705px;
+@lightBoxH:650px;
 .QuadraticCurveBox{
 	width:@lightBoxW;
 	height:@lightBoxH;
@@ -283,7 +288,7 @@
 }
 .LineIcon9{
 	left:0;
-	top:705px;
+	top:650px;
 }
 .RightLineList{
 	transform: rotateY(180deg);
@@ -292,24 +297,25 @@
 
 .HeaderCon{
 	width: 798px;
-	height: 94px;
-	line-height: 94px;
-    margin: 27px auto 0;
+    height: 78px;
+   
+    margin: 13px auto 0;
     background: url(../img/top_bg.png) no-repeat;
+    background-size: 100% 100%;
 }
 .DownIconBox{
    position: relative;
-   width: 50px;
-   height:88px;
+   width: 40px;
+   height:68px;
    margin:0 auto;
    background: url(../img/down.png) no-repeat;
-   
+   background-size: 100% 100%;
    animation: downMove 5s infinite;  
    -moz-animation: downMove 5s infinite;
    -webkit-animation: downMove 5s infinite;
 }
 .DownIconBox.UpSideDown{
-	margin-top:20px;	
+	margin-top:-10px;	
 	transform:rotate(180deg);
 	animation: upMove 5s infinite;
 	-moz-animation: upMove 5s infinite;
@@ -317,35 +323,35 @@
 }
 
 @keyframes downMove{
-	from {top: -10px;opacity: .2;}
-	to {top: 10px;opacity: 1;}
+	from {top:-20px;opacity: .2;}
+	to {top: 0px;opacity: 1;}
 }
 
 @-moz-keyframes downMove{
-	from {top: -10px;opacity: .2;}
-	to {top: 10px;opacity: 1;}
+	from {top:-20px;opacity: .2;}
+	to {top: 0px;opacity: 1;}
 }
 
 
 @-webkit-keyframes downMove {
-	from {top: -10px;opacity: .2;}
-	to {top: 10px;opacity: 1;}
+	from {top:-20px;opacity: .2;}
+	to {top: 0px;opacity: 1;}
 }
 
 @keyframes upMove{
-	from {top: 10px;opacity: .2;}
-	to {top: -10px;opacity: 1;}
+	from {top: 30px;opacity: .2;}
+	to {top: 10px;opacity: 1;}
 }
 
 @-moz-keyframes upMove{
-	from {top: 10px;opacity: .2;}
-	to {top: -10px;opacity: 1;}
+	from {top: 30px;opacity: .2;}
+	to {top: 10px;opacity: 1;}
 }
 
 
 @-webkit-keyframes upMove {
-	from {top: 10px;opacity: .2;}
-	to {top: -10px;opacity: 1;}
+	from {top: 30px;opacity: .2;}
+	to {top: 10px;opacity: 1;}
 }
 
 /* 旋转模块  start*/
@@ -410,7 +416,7 @@
 	}
 	.RollName{
 		width:175px;
-		margin-left:-50px;
+		margin-left:-37.5px;
 	}
 	
 }
@@ -543,7 +549,8 @@
 
 /* 中间底部 */
 .CenterBottom{
-	margin-top: 30px;
+	width: 760px;
+    margin: -55px auto 0;
 }
 .LevelDataLi{
 	width:137px;
@@ -552,20 +559,21 @@
     position: relative;
 }
 .LevelDataLi+.LevelDataLi{
-	margin-left: 250px;
+	margin-left: 122px;
 }
 .UpIconBox{
-	width: 50px;
-	height:88px;
-	left: 42px;
+	width: 40px;
+	height:68px;
+	left: 46px;
 	background: url(../img/up.png) no-repeat;
+	background-size: 100% 100%;
 	position: absolute;
 	animation: upMove 5s infinite;
 	-moz-animation: upMove 5s infinite;
 	-webkit-animation: upMove 5s infinite;
 }
 .UpIconBox.UpSideDown{
-	margin-top:-20px;
+	margin-top:20px;
 	transform:rotate(180deg);
 	animation: downMove 5s infinite;
 	-moz-animation: downMove 5s infinite;

@@ -20,12 +20,16 @@ $(function () {
         $(this).addClass('active');
         lightLoopLeft.setType('converage');
         lightLoopRight.setType('converage');
+        $(".DownIconBox").removeClass('UpSideDown');
+            $(".UpIconBox").removeClass('UpSideDown');
     })
     $("body").on('click', '#DataServe', function () {
         $(this).siblings('.TabsLi').removeClass('active');
         $(this).addClass('active');
         lightLoopLeft.setType("spread");
         lightLoopRight.setType('spread');
+        $(".DownIconBox").addClass('UpSideDown');
+        $(".UpIconBox").addClass('UpSideDown');
     })
 
     //数据汇聚和数据服务的循环切换 使用setTimeout()模拟setInterval()，才能准确在间隔时间内执行方法
