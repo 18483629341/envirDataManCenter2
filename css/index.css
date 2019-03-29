@@ -270,7 +270,7 @@
 .HeaderCon {
   width: 798px;
   height: 78px;
-  margin: 13px auto 0;
+  margin: 20px auto 0;
   background: url(../img/top_bg.png) no-repeat;
   background-size: 100% 100%;
 }
@@ -443,7 +443,8 @@
 }
 .RotateItem p {
   color: #fff;
-  font-size: 18px;
+  font-size: 24px;
+  font-weight: 700;
   line-height: 100px;
   text-align: center;
 }
@@ -464,7 +465,8 @@
 }
 .RotateItemInner p {
   color: #fff;
-  font-size: 14px;
+  font-weight: 700;
+  font-size: 18px;
   line-height: 80px;
   text-align: center;
 }

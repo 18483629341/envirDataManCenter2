@@ -8,7 +8,7 @@
     <style>
         .rotateBack{
          
-            width: 1000px;
+            width: 1100px;
             margin: 20px auto;
             border: 1px solid red;
         }
@@ -19,11 +19,11 @@
 <body>
 
  
-    <div class="rotateBack">
+    <div class="rotateBack" >
         <div class="ellipse">
             1
         </div>
-        <canvas class="RotateRolls" id="RotateRolls1" width=1000 height=380></canvas>
+        <canvas class="RotateRolls" id="RotateRolls1" width=1100 height=480></canvas>
         <!-- <div class="RotateRolls" id="rotateItem2">
             2
         </div> -->
@@ -49,7 +49,7 @@
                 _this.ctx.drawImage(_this.img2, 100, 60);
             }
        }
-       var drawImage=new DrawImage();
+       //var drawImage=new DrawImage();
     </script>
     <script>
         /**   方式canvas
@@ -59,13 +59,13 @@
          */
         var textArr0=[21234,4901,5601,61011,4901,5601,61011,4901,5601];
         var nameArr0=['环境风险与应急','核与辐射','自然生态','环境质量信息','污染源','环保科技与产业','政务信息','环保相关信息','政策法则标准'];
-        //var rollPanel=new RollPanel('RotateRolls1','./img/roll_wai.png','./img/blue_roll.png',100,9,textArr0,nameArr0,'');
+        var rollPanel=new RollPanel('RotateRolls1','./img/roll_wai.png','./img/blue_roll.png',100,9,textArr0,nameArr0,'');
         function RollPanel(canvasId,backSrc,itemSrc,sideLength,n,textArr,nameArr,unit){
             var _this = this;
             _this.canvas=document.getElementById(canvasId);
             _this.content=_this.canvas.getContext("2d");
-            _this.contentW=$('#'+canvasId).width();
-            _this.contentH=$('#'+canvasId).height();
+            _this.contentW=$('#'+canvasId).width()-100;
+            _this.contentH=$('#'+canvasId).height()-100;
             _this.textArr=textArr;
             _this.nameArr=nameArr;
             _this.unit=unit||'';
@@ -76,21 +76,23 @@
             _this.content.beginPath();
             _this.backImage=new Image();
             _this.backImage.src=backSrc;
+            _this.backImage.onload=function(){
+                console.log('backImage');
+            }
+            _this.itemImageArr=[];
+
             _this.itemImage=new Image();
             _this.itemImage.src=itemSrc;
-            _this.backImage.onload=function(){
-                _this.content.drawImage(_this.backImage,0,0,_this.contentW,_this.contentH);
-            }
 
             _this.angle = 0;
             //旋转路径是根据父元素的宽度的一半作为椭圆的X轴的半径
-            _this.rx = $('#'+canvasId).width() / 2;
-            _this.ry = $('#'+canvasId).height() / 2; //0.5为y轴半径与x轴半径的比率；
+            _this.rx = _this.contentW / 2;
+            _this.ry =_this.contentH / 2; //0.5为y轴半径与x轴半径的比率；
             _this.minRadio = 0.6;
             var turnOn = setInterval(function () {
                     //顺时针旋转 ++，逆时针旋转  --
                     _this.turn();
-                }, 3000);
+                },20);
             
             $('#'+canvasId).hover(function () {
                 console.log('hover');
@@ -98,23 +100,44 @@
             }, function () {
                 turnOn = setInterval(function () {
                     //顺时针旋转 ++，逆时针旋转  --
-                    _this.turn();
-                }, 3000)
+                   _this.turn();
+                }, 20)
             }).trigger('mouseleave');
+            _this.initRolls=function(){
+                for (var i = 0; i < 1; i++) {//_this.n
+                    var nowAngle = _this.angle + parseInt(i * 360 / _this.n);
+                    var simpAngle = nowAngle % 360;     //角度简化到0到360°
+                    var radio = 1;
+                    if (simpAngle >= 90 && simpAngle <= 270) {
+                        radio = (simpAngle - 90) * (-1) * (1 - _this.minRadio) / 180 + 1;
+                    } else if (simpAngle > 270) {
+                        radio = (simpAngle - 270) * (1 - _this.minRadio) / 180 + _this.minRadio;
+                    } else {
+                        radio = (simpAngle - (-90)) * (1 - _this.minRadio) / 180 + _this.minRadio;
+                    }
+                    //0.017453293为角度转为弧度的比率值，1度=0.017453293弧度；Math.cos(x),x为弧度
+                    var nowRad = parseFloat(simpAngle * 0.017453293).toFixed(8);
+                    var startX=_this.rx * Math.cos(nowRad) + _this.rx - _this.sideLength / 2*radio+50;
+                    var startY=_this.ry * Math.sin(nowRad) + _this.ry - _this.sideLength / 2*radio+50;
+                    // var itemImage=new Image();
+                    // itemImage.src=itemSrc;
+                    _this.itemImage.onload=function(){
+                        _this.content.drawImage(_this.itemImage,startX,startY,_this.sideLength*radio,_this.sideLength*radio);
+                    }
+                    //_this.itemImageArr.push(itemImage);
+                }
+            };
+            _this.initRolls();
             //循环一次执行的方法
             _this.turn = function () {
                 console.log(' _this.turn开始执行');
                 //requestAnimFrame(__this.turn);
-                _this.angle = _this.angle + 0.01;
+                _this.angle = _this.angle + 0.4;
                 var radio = null;
-                _this.itemImage.onload=function(){
-                        console.log('_this.itemImage.onload');
-                       // _this.content.drawImage(_this.itemImage,_this.itemImage,_this.rx * Math.cos(nowRad) + _this.rx - _this.sideLength / 2,_this.ry * Math.sin(nowRad) + _this.ry - _this.sideLength / 2,_this.sideLength,_this.sideLength);
-                        _this.content.drawImage(_this.itemImage,0,0,10,10);
-                       
-                   }
-               
-                for (var i = 0; i < _this.n; i++) {
+                _this.content.clearRect(0,0,_this.contentW+100,_this.contentH+100);
+                _this.content.beginPath();
+                _this.content.drawImage(_this.backImage,50,50,_this.contentW,_this.contentH);          
+                for (var i = 0; i < 1; i++) {////_this.n
 
                     var nowAngle = _this.angle + parseInt(i * 360 / _this.n);
                     var simpAngle = nowAngle % 360;     //角度简化到0到360°
@@ -128,17 +151,16 @@
                     }
                     //0.017453293为角度转为弧度的比率值，1度=0.017453293弧度；Math.cos(x),x为弧度
                     var nowRad = parseFloat(simpAngle * 0.017453293).toFixed(8);
-                    _this.itemImage.onload=function(){
-                        console.log('_this.itemImage.onload');
-                       // _this.content.drawImage(_this.itemImage,_this.itemImage,_this.rx * Math.cos(nowRad) + _this.rx - _this.sideLength / 2,_this.ry * Math.sin(nowRad) + _this.ry - _this.sideLength / 2,_this.sideLength,_this.sideLength);
-                        _this.content.drawImage(_this.itemImage,0,0,10,10);
-                       
-                   }
-                   
-                
-
+                    //console.log('_this.itemImage.onload');
+                    var startX=_this.rx * Math.cos(nowRad) + _this.rx - _this.sideLength / 2*radio+50;
+                    var startY=_this.ry * Math.sin(nowRad) + _this.ry - _this.sideLength / 2*radio+50;
+                    _this.content.drawImage(_this.itemImage,startX,startY,_this.sideLength*radio,_this.sideLength*radio);
+                    _this.content.fillStyle='#ffffff';
+                    _this.content.font=22*radio+"px 微软雅黑";
+                    _this.content.fillText(_this.textArr[i],startX+10*radio,startY+50*radio);
+                     //_this.content.drawImage(_this.itemImageArr[i],0,0,10,10);
                 }
-
+                _this.content.closePath();
             }
 
         }

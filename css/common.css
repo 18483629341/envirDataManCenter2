@@ -103,12 +103,12 @@ body {
   margin: 0 auto;
 }
 .section .CenterHeader {
-  height: 235px;
+  height: 228px;
 }
 .section .CenterMain {
   height: 440px;
   transform: scale(0.9);
-  transform-origin: 40% 50%;
+  transform-origin: 50% 33%;
 }
 .footer {
   width: 100%;
