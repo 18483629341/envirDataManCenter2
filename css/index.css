@@ -355,8 +355,9 @@
   width: 360px;
   height: 102px;
   top: 270px;
-  left: 320px;
+  left: 323px;
   background: url('../img/roll_di.png') no-repeat;
+  background-size: 100% 100%;
 }
 @-webkit-keyframes spin {
   from {
