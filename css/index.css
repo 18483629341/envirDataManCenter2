@@ -136,47 +136,47 @@
   font-weight: 700;
   color: #ffffff;
 }
-.leftBox {
+.LeftBox {
   margin-right: 5px;
 }
-.leftBox .ListHeader {
+.LeftBox .ListHeader {
   padding-left: 14px;
   background: url('../img/left_title_bg.png');
 }
-.leftBox .ListLi {
+.LeftBox .ListLi {
   background: url('../img/left_box_bg.png');
   background-size: 100% 100%;
 }
-.leftBox .ListLi .item {
+.LeftBox .ListLi .item {
   padding-left: 20px;
 }
-.leftBox .ListLi .num {
+.LeftBox .ListLi .num {
   padding-right: 20px;
 }
-.leftBox .ListLi + .ListLi {
+.LeftBox .ListLi + .ListLi {
   margin-top: 12px;
 }
-.rightBox {
+.RightBox {
   margin-left: 5px;
 }
-.rightBox .ListHeader {
+.RightBox .ListHeader {
   padding-right: 28px;
   text-align: right;
   background: url('../img/right_title_bg.png');
 }
-.rightBox .ListLi {
+.RightBox .ListLi {
   background: url('../img/right_box_bg.png');
   background-size: 100% 100%;
 }
-.rightBox .ListLi .item {
+.RightBox .ListLi .item {
   padding-right: 20px;
   text-align: right;
 }
-.rightBox .ListLi .num {
+.RightBox .ListLi .num {
   padding-left: 20px;
   text-align: left;
 }
-.rightBox .ListLi + .ListLi {
+.RightBox .ListLi + .ListLi {
   margin-top: 20.1px;
 }
 .HeaderCon .item {
